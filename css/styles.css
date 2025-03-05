@@ -135,6 +135,67 @@ margin-right: auto;
   font-size: 32px;
 }
 
+.pricing-switch {
+  margin-bottom: 64px;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-label {
+  font-size: 15px;
+  line-height: 28px;
+  color: rgba(110, 114, 142, 0.5);
+  cursor: pointer;
+}
+
+.switch-label:hover {
+  color: #6e728e;
+}
+
+.switch-control {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  padding: 4px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-radius: 16px;
+  background-color: #696edd;
+  background-image: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+}
+
+.switch-circle {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: margin 0.2s ease;
+}
+
+.switch-control-annual,
+.switch-control-monthly {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switch-input-annual:checked ~ .switch-control .switch-control-monthly,
+.switch-input-monthly:checked ~ .switch-control .switch-control-annual {
+  z-index: 5;
+}
+
+.switch-input-monthly:checked ~ .switch-control .switch-circle {
+  margin-left: 24px;
+}
+
 .pricing {
   width: 100%;
 }
@@ -200,45 +261,18 @@ margin-right: auto;
   margin-bottom: 32px;
   list-style: none;
 }
+
+.pricing-plan-best .pricing-plan-features {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
 .pricing-plan-feature {
   padding: 12px;
   border-bottom: 1px solid rgba(110, 114, 142, 0.25);
 }
 
-
-
-
-
-
-
-
-
-.pricing-list-item-button:hover {
-  color: var(--linear-color-bold);
-  background-image: linear-gradient(
-    var(--accent-color),
-    var(--accent-color)
-  );
-}
-
-
-
-.pricing-list .pricing-list-item-active  .pricing-list-item-button{
-  color: var(--linear-color-bold);
-  background-image: linear-gradient(
-    var(--accent-color),
-    var(--accent-color)
-  );
-}
-
-.pricing-list .pricing-list-item-active  .pricing-list-item-button:hover {
-  color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  background-image: linear-gradient(
-    to right,
-    var(--linear-color-thin),
-    var(--linear-color-bold)
-  );
+.pricing-plan-best .pricing-plan-feature {
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 
@@ -250,58 +284,16 @@ margin-right: auto;
 
 
 
-
-
-.header-price-toggler {
-  display: flex;
-}
-
-.header-toggler-text{
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 28px;
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  color: rgba(110, 114, 142, 0.5);
-}
-
-.header-toggler-annually {
-  margin-right: 24px;
-}
 
 .header-toggler-button-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 56px;
-  height: 32px;
-  padding: 6px;
-  margin-right: 24px;
-  border-radius: 16px;
-  background-image: linear-gradient(
-    to right,
-    var(--linear-color-thin),
-    var(--linear-color-bold)
-  );
-  cursor: pointer;
-  transition: opacity 0.4s ease;
+
 }
 
 .header-toggler-button-wrapper:hover {
   opacity: 0.5;
 }
 
-.header-toggler-button-wrapper:active {
-  justify-content: flex-start;
-  opacity: 1;
-}
 
 .header-toggler-button {
-  width: 24px;
-  height: 24px;
-  border: 0;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  cursor: pointer;
+
 }
